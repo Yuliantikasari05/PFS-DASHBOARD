@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #9c88ff57;
+    padding: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px 0;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #2a2929;
+    border-radius: 5px;
+}
+
+.sidebar ul.footer li {
+    font-size: 16px;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #d7d7d7;
+    width: 500px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Cards and Graph */
+.cards-graph {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 1px;
+    margin-top: 35px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
+    height: 150px;
+    margin-right: 20px;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.visa {
+    background-color: black;
+}
+
+.mastercard {
+    background-color: #a699ea;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-number {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.card-holder {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.card-expiry {
+    font-size: 12px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-weight: bold;
+    color: #ffffff80;
+}
+
+.card-details h2 {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+.card-details p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.graph {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(231, 228, 228);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.graph h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Transactions and History */
+.transactions-history {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transactions {
+    width: 90%;
+    margin-top: 10px;
+} 
+
+.history {
+    width: 90%;
+}
+
+.transactions ul, .history ul {
+    list-style: none;
+}
+
+.transactions li, .history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.transactions li i, .history li i {
+    margin-right: 10px;
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+.transactions li:hover, .history li:hover {
+    background-color: rgba(233, 229, 235, 0.795);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cards-transactions, .graph-history {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cards, .transactions, .graph, .history {
+    margin-bottom: 20px; /* Adjust spacing */
+}
+
+.main-content {
+    display: flex; /* Flexbox for two-column layout */
+    justify-content: space-between; /* Space between sections */
+}
+
+.left-column {
+    flex: 1; /* Take up 50% of the space */
+    margin-right: 20px; /* Space between columns */
+}
+
+.right-column {
+    flex: 1; /* Take up 50% of the space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-graph {
+        grid-template-columns: 1fr;
+    }
+
+    .transactions-history {
+        flex-direction: column;
+    }
+
+    .transactions, .history {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .graph h3 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiiNeo.io Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">FiiNeo.io</div>
+            <ul>
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-chart-bar"></i> Statistics</li>
+                <li><i class="fas fa-wallet"></i> My Wallet</li>
+                <li><i class="fas fa-exchange-alt"></i> Transfers</li>
+                <li><i class="fas fa-envelope"></i> Message</li>
+                <li><i class="fas fa-heart"></i> Favorite</li>
+                <li><i class="fas fa-user"></i> Profile</li>
+            </ul>
+            <ul class="footer">
+                <li><i class="fas fa-question-circle"></i> Support</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+                <li><i class="fas fa-sign-out-alt"></i> Log out</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Header -->
+            <header class="header">
+                <h1>Hello, Mbak Yull <span>👋</span></h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="profile">
+                    <img src="mbayul.jpg" alt="Profile Picture">
+                </div>
+            </header>
+
+            <!-- Main Sections in Two Columns -->
+            <section class="main-content">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <!-- Cards and Transactions Section -->
+                    <div class="cards-transactions">
+                        <div class="cards">
+                            <div class="card visa">
+                                <div class="card-details">
+                                    <h2><i class="fas fa-credit-card" style="color: brown;"></i> VISA</h2>
+                                    <p class="card-number">1230 4670 4670</p>
+                                    <p class="card-holder">Yuli Antika Sari</p>
+                                    <p class="card-expiry">Expires 03/25</p>
+                                </div>
+                            </div>
+                            <div class="card mastercard">
+                                <div class="card-details">
+                                    <h2><i class="fas fa-credit-card" style="color: rgb(221, 221, 14);"></i> Mastercard</h2>
+                                    <p class="card-number">4670 4670 1230</p>
+                                    <p class="card-holder">Yuli Antika Sari</p>
+                                    <p class="card-expiry">Expires 05/27</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="transactions">
+                            <h3>Transactions</h3>
+                            <ul>
+                                <li><i class="fas fa-video"></i> <span>Wedding Video</span><span>$3,000</span><span>Apr 06, 2021</span></li>
+                                <li><i class="fas fa-passport"></i> <span>Passport Verification</span><span>$100</span><span>Apr 02, 2021</span></li>
+                                <li><i class="fas fa-camera"></i> <span>RK’s Photography</span><span>$470</span><span>Mar 28, 2021</span></li>
+                                <li><i class="fas fa-shopping-basket"></i> <span>Grocery Shop</span><span>$186</span><span>Mar 24, 2021</span></li>
+                                <li><i class="fas fa-plane"></i> <span>Flight Ticket</span><span>$860</span><span>Mar 21, 2021</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <!-- Graph and History Section -->
+                    <div class="graph-history">
+                        <div class="graph">
+                            <h3>$6,482</h3>
+                            <canvas id="balanceChart"></canvas>
+                        </div>
+
+                        <div class="history">
+                            <h3>History</h3>
+                            <ul>
+                                <li><i class="fab fa-linkedin"></i> <span>LinkedIn Pro</span><span>-$260.80</span><span>Mar 10, 2021</span></li>
+                                <li><i class="fas fa-file"></i> <span>Figma Plan</span><span>-$126.50</span><span>Mar 09, 2021</span></li>
+                                <li><i class="fas fa-ad"></i> <span>Instagram Ads</span><span>-$108.40</span><span>Mar 08, 2021</span></li>
+                                <li><i class="fas fa-dribbble"></i> <span>Dribbble Pro</span><span>-$108.40</span><span>Mar 08, 2021</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Place your custom JavaScript here -->
+    <script src="script.js"></script>
+</body>
+</html>
